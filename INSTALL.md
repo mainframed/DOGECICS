@@ -26,7 +26,7 @@ First in **tk4-** you need to add the following to `local_conf/01` (dont worry, 
 
 (This adds a new printer at address 10E, which is included with TK4- which you can see here: http://naspa.net/website/files/CD6/cookbook/genmvs.html)
 
-Next, boot **tk4-** with the `mvs` command. Once its loaded, use `x3270`, connect to `localhost:3270` and logon as `herc01`/`cul8tr`, hit enter a bunch of times until you get to the `REVIEW FRONT END` (this is called `RFE` but I'll refer to it later as `REVIEW`). Type `3.4` and hit enter. In `Data set name prefix ==>` type `SYS1.JES2PARM` and hit enter. Right below the `S` on the left side of the screen type `E` and hit enter, then on the `.` in front of `JES2PARM` hit enter (you are now editing a members of a partitioned dataset: `SYS1.JES2PARM(JES2PARM)`).
+Next, boot **tk4-** with the `./mvs` command in linux. Once its loaded, use `x3270`, connect to `localhost:3270` and logon as `herc01`/`cul8tr`, hit enter a bunch of times until you get to the `REVIEW FRONT END` (this is called `RFE` but I'll refer to it later as `REVIEW`). Type `3.4` and hit enter. In `Data set name prefix ==>` type `SYS1.JES2PARM` and hit enter. Right below the `S` on the left side of the screen type `E` and hit enter, then on the `.` in front of `JES2PARM` hit enter (you are now editing a members of a partitioned dataset: `SYS1.JES2PARM(JES2PARM)`).
 
 **Pro Tips**: In this editor you enter new lines by typing `I#` in the left hand side where the numbers are. For example, `i23` would insert 23 lines. But be careful! If you hit enter any empty line gets deleted. If you screw up, don't hit `F3` to exit, this will autosave your changes, type `CANCEL` in the `Command ===>` area. Speaking of the `Command ===>` you can use `F` or `FIND` to search for the things you need to changes instead of using `F7`/`F8` to go down/up in the document. 
 
@@ -153,7 +153,7 @@ put DOGESMAP
 put DOGETMAP
 ```
 
-change the working director to COBOL `lcd ../COBOL` then upload:
+change the working directory to COBOL `lcd ../COBOL` then upload:
 
 ```bash
 put DOGEDEET
@@ -163,7 +163,7 @@ put DOGESEND
 put DOGETRAN
 ```
 
-change the working director to SIT `lcd ../SIT` then upload:
+change the working directory to SIT `lcd ../SIT` then upload:
 
 ```
 put KIKFCTDO
@@ -172,7 +172,7 @@ put KIKPPTDO
 put KIKSITDO
 ```
 
-change the working director to JCL `lcd ../JCL` then upload:
+change the working directory to JCL `lcd ../JCL` then upload:
 
 ```
 put compile_cobol.jcl COMPCOBL

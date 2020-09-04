@@ -15,7 +15,6 @@
 //* Original ANSi Artist: Soldier of FORTRAN
 //* Original ANSi Date:   20200902
 //*
-
 //* Command Line Args: --netsol --ROW 23 --COL 32 --color YELLOW 
 //*                    --file tk4-doge.jcl --member DOGESOL 
 //*                    tk4-doge.ans 
