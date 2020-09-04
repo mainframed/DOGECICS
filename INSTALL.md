@@ -282,8 +282,6 @@ This all assumes you're running the python script on the same host as **dogecoin
 * The VSAM file won't update while KICKS is running and fails silently. Exit KICKS then use `--force` to force an update. 
 * Sent funds wont show up in the VSAM file until after you run the script again. 
 
-To make this process automated it is 
-
 # Using DOGECICS
 
 DOGECICS is a simple CICS/KICKS application. Access CICS on **tk4-** by running `KICKS SIT(DO)` from the TSO `READY` prompt (hit `F3` a bunch). Once you're at the `K I C K S` screen *CLEAR* the screen with the `x3270` keyboard (top right hand button) and click `Clear`. With the screen clear type `DOGE` and away you go. To exit DOGECICS at any time hit `F3`. To Exit KICKS clear the screen and type `KSSF`.
