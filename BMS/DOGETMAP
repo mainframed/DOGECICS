@@ -1,0 +1,882 @@
+* HLASM BMS Map
+CICSMAP  TITLE 'Dogecoin Transaction History BMS'
+         PRINT NOGEN
+DOGETR   DFHMSD TYPE=&SYSPARM,                                         X
+               MODE=INOUT,                                             X
+               LANG=COBOL,                                             X
+               DSATTS=(COLOR),MAPATTS=(COLOR,HILIGHT),                 X
+               TIOAPFX=YES,                                            X
+               CTRL=FREEKB                                              
+* Below is the MAP name, you use this in COBOL to reference the MAP
+* You could have more than one map, hence size/line/column
+DOGETR1   DFHMDI SIZE=(24,80),                                         X
+               LINE=1,                                                 X
+               COLUMN=1
+*
+         DFHMDF POS=(01,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(01,09),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='yy,yYY'
+*
+         DFHMDF POS=(01,16),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYy,yy'
+*
+         DFHMDF POS=(01,26),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='yy,yYyr_'
+*
+         DFHMDF POS=(01,38),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYY'
+*
+         DFHMDF POS=(01,48),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYy,yy'
+*
+         DFHMDF POS=(01,58),                                           X
+               LENGTH=07,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYyr_'
+*
+         DFHMDF POS=(01,67),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(02,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(02,09),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$P"``'
+*
+         DFHMDF POS=(02,16),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"`"4$$'
+*
+         DFHMDF POS=(02,26),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$P"`"4$L'
+*
+         DFHMDF POS=(02,36),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"``'
+*
+         DFHMDF POS=(02,46),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"`"4$$'
+*
+         DFHMDF POS=(02,56),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"`"4$L'
+*
+         DFHMDF POS=(02,66),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,09),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,16),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,26),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,33),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,36),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,46),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,53),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,56),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,63),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(03,66),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,02),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$XXX'
+*
+         DFHMDF POS=(04,09),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,16),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,26),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,33),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,36),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='PPXXXXXQQ'
+*
+         DFHMDF POS=(04,46),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,53),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,56),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(04,66),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$XXX'
+*
+         DFHMDF POS=(05,02),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,..'
+*
+         DFHMDF POS=(05,09),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(05,16),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,.,d$$'
+*
+         DFHMDF POS=(05,26),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(05,33),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(05,39),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='..,d$9'
+*
+         DFHMDF POS=(05,46),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,.,d$$'
+*
+         DFHMDF POS=(05,56),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,..'
+*
+         DFHMDF POS=(05,66),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,..'
+*
+         DFHMDF POS=(06,03),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='""sss'
+*
+         DFHMDF POS=(06,09),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(06,17),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='";SSS"$$'
+*
+         DFHMDF POS=(06,33),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(06,39),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='sss""'
+*
+         DFHMDF POS=(06,47),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='";SSS"$$'
+*
+         DFHMDF POS=(06,57),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='";SSs'
+*
+         DFHMDF POS=(06,67),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='""sss'
+*
+         DFHMDF POS=(07,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='mm'
+*
+         DFHMDF POS=(07,07),                                           X
+               LENGTH=07,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYyr_'
+*
+         DFHMDF POS=(07,16),                                           X
+               LENGTH=08,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='yy,yYyr_'
+*
+         DFHMDF POS=(07,27),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_,yYY'
+*
+         DFHMDF POS=(08,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='yy'
+*
+         DFHMDF POS=(08,06),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"`"4$L'
+*
+         DFHMDF POS=(08,16),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$P"`"4$L'
+*
+         DFHMDF POS=(08,26),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='j$P"``'
+*
+         DFHMDF POS=(09,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,06),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,13),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,16),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,26),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(09,58),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='('
+*
+         DFHMDF POS=(09,60),                                           X
+               LENGTH=01,                                              X
+               COLOR=TURQUOISE,                                        X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='W'
+*
+         DFHMDF POS=(09,62),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=')'
+*
+         DFHMDF POS=(09,64),                                           X
+               LENGTH=02,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='ow'
+*
+         DFHMDF POS=(09,68),                                           X
+               LENGTH=07,                                              X
+               COLOR=PINK,                                             X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Option:'
+*
+OPTION   DFHMDF POS=(09,76),                                           X
+               LENGTH=01,                                              X
+               COLOR=RED,                                              X
+               HILIGHT=UNDERLINE,                                      X
+               ATTRB=(NORM,UNPROT,IC,FSET)
+         DFHMDF POS=(09,78),LENGTH=1,ATTRB=ASKIP  
+*
+         DFHMDF POS=(10,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(10,06),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(10,13),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(10,16),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(10,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(10,26),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='PPXXXXXQQ'
+*
+         DFHMDF POS=(11,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(11,06),                                           X
+               LENGTH=09,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='7$b,.,d$9'
+*
+         DFHMDF POS=(11,16),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(11,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(11,29),                                           X
+               LENGTH=06,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='..,d$9'
+*
+         DFHMDF POS=(11,41),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='('
+*
+         DFHMDF POS=(11,43),                                           X
+               LENGTH=01,                                              X
+               COLOR=TURQUOISE,                                        X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='S'
+*
+         DFHMDF POS=(11,45),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=')'
+*
+         DFHMDF POS=(11,47),                                           X
+               LENGTH=08,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='uch Send'
+*
+         DFHMDF POS=(09,41),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='('
+*
+         DFHMDF POS=(09,43),                                           X
+               LENGTH=01,                                              X
+               COLOR=TURQUOISE,                                        X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='D'
+*
+         DFHMDF POS=(09,45),                                           X
+               LENGTH=01,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=')'
+*
+         DFHMDF POS=(09,47),                                           X
+               LENGTH=06,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='etails'
+*
+         DFHMDF POS=(11,58),                                           X
+               LENGTH=08,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='PF3 Exit'
+*
+         DFHMDF POS=(12,02),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(12,07),                                           X
+               LENGTH=07,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='";SSS"`'
+*
+         DFHMDF POS=(12,23),                                           X
+               LENGTH=02,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$$'
+*
+         DFHMDF POS=(12,29),                                           X
+               LENGTH=05,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='sss""'
+*
+         DFHMDF POS=(14,08),                                           X
+               LENGTH=03,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='KEY'
+*
+         DFHMDF POS=(14,19),                                           X
+               LENGTH=04,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='DATE'
+*
+         DFHMDF POS=(14,30),                                           X
+               LENGTH=04,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='TYPE'
+*
+         DFHMDF POS=(14,41),                                           X
+               LENGTH=05,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Label'
+*
+         DFHMDF POS=(14,52),                                           X
+               LENGTH=13,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Amount (DOGE)'
+*
+         DFHMDF POS=(15,02),                                           X
+               LENGTH=77,                                              X
+               COLOR=BLUE,                                             X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='-----------------------------------------------X
+               ------------------------------'
+* -------------------------------------------------
+TRAN1K   DFHMDF POS=(16,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN1D   DFHMDF POS=(16,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN1T   DFHMDF POS=(16,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN1L   DFHMDF POS=(16,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN1S   DFHMDF POS=(16,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN1A   DFHMDF POS=(16,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN2K   DFHMDF POS=(17,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN2D   DFHMDF POS=(17,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN2T   DFHMDF POS=(17,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN2L   DFHMDF POS=(17,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN2S   DFHMDF POS=(17,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN2A   DFHMDF POS=(17,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN3K   DFHMDF POS=(18,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN3D   DFHMDF POS=(18,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN3T   DFHMDF POS=(18,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN3L   DFHMDF POS=(18,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN3S   DFHMDF POS=(18,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN3A   DFHMDF POS=(18,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN4K   DFHMDF POS=(19,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN4D   DFHMDF POS=(19,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN4T   DFHMDF POS=(19,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN4L   DFHMDF POS=(19,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN4S   DFHMDF POS=(19,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN4A   DFHMDF POS=(19,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN5K   DFHMDF POS=(20,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN5D   DFHMDF POS=(20,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN5T   DFHMDF POS=(20,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN5L   DFHMDF POS=(20,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN5S   DFHMDF POS=(20,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN5A   DFHMDF POS=(20,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN6K   DFHMDF POS=(21,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN6D   DFHMDF POS=(21,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN6T   DFHMDF POS=(21,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN6L   DFHMDF POS=(21,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN6S   DFHMDF POS=(21,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN6A   DFHMDF POS=(21,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+TRAN7K   DFHMDF POS=(22,08),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN7D   DFHMDF POS=(22,19),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN7T   DFHMDF POS=(22,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT)
+*
+TRAN7L   DFHMDF POS=(22,41),                                           X
+               LENGTH=10,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT)
+*
+TRAN7S   DFHMDF POS=(22,52),                                           X
+               LENGTH=01,                                              X
+               COLOR=GREEN                                             X
+               ATTRB=(NORM,PROT)
+*
+TRAN7A   DFHMDF POS=(22,54),                                           X
+               LENGTH=19,                                              X
+               COLOR=NEUTRAL,                                          X
+               ATTRB=(NORM,PROT),                                      X
+               PICOUT='ZZ,ZZZ,ZZ9.99999999'
+* -------------------------------------------------
+PREV     DFHMDF POS=(24,30),                                           X
+               LENGTH=10,                                              X
+               COLOR=GREEN,                                            X
+               ATTRB=(NORM,PROT)
+*
+NEXT     DFHMDF POS=(24,41),                                           X
+               LENGTH=08,                                              X
+               COLOR=GREEN,                                            X
+               ATTRB=(NORM,PROT)
+*
+         DFHMSD TYPE=FINAL
+         END

@@ -1,0 +1,211 @@
+DOGECOIN TITLE 'Dogecoin BMS'
+         PRINT NOGEN
+DOGECN   DFHMSD TYPE=&SYSPARM,                                         X
+               MODE=OUT,                                               X
+               LANG=COBOL,                                             X
+               DSATTS=(COLOR),MAPATTS=(COLOR),                         X
+               TIOAPFX=YES,                                            X
+               CTRL=FREEKB     
+* Below is the MAP name, you use this in COBOL to reference the MAP
+* You could have more than one map, hence size/line/column
+DOGECN1  DFHMDI SIZE=(24,80),                                          X
+               LINE=1,                                                 X
+               COLUMN=1
+*.~'~.~'~.~'~.~'~.~'~.~'~.~'~.~'~.~'~.~'~.
+* Good resource
+* https://www.ibm.com/support/knowledgecenter/SSGMCP_5.2.0/com.ibm.cics
+*   .ts.applicationprogramming.doc/topics/dfhp473.html
+* Colors: [DEFAULT], BLUE, RED, PINK, GREEN,
+*         TURQUOISE, YELLOW, NEUTRAL (white)
+* DOGECICS
+*                               Y.                      _
+*                               YiL                   .```.
+*                               Yii;      WOW       .; .;;`.
+*                 MUCH COIN     YY;ii._           .;`.;;;; :
+*                               iiYYYYYYiiiii;;;;i` ;;::;;;;
+*                           _.;YYYYYYiiiiiiYYYii  .;;.   ;;;
+*                        .YYYYYYYYYYiiYYYYYYYYYYYYii;`  ;;;;
+*                      .YYYYYYY$$YYiiYY$$$$iiiYYYYYY;.ii;`..
+*                     :YYY$!.  TYiiYY$$$$$YYYYYYYiiYYYYiYYii.
+*                     Y$MM$:   :YYYYYY$!"``"4YYYYYiiiYYYYiiYY.
+*                  `. :MM$$b.,dYY$$Yii" :`   :YYYYllYiiYYYiYY
+*               _.._ :`4MM$!YYYYYYYYYii,.__.diii$$YYYYYYYYYYY
+*               .,._ $b`P`     "4$$$$$iiiiiiii$$$$YY$$$$$$YiY;
+*                  `,.`$:       :$$$$$$$$$YYYYY$$$$$$$$$YYiiYYL
+*                   "`:$$.    .;PPb$~.,.``T$$YY$$$$YYYYYYiiiYYU:
+*                 ` ;$P$;;: ;;;;i$y$"!Y$$$b;$$$Y$YY$$YYYiiiYYiYY
+*                   $Fi$$ .. ``:iii.`-";YYYYY$$YY$$$$$YYYiiYiYYY
+*                   :Y$$rb ````  `_..;;i;YYY$YY$$$$$$$YYYYYYYiYY:
+*                    :$$$$$i;;iiiiidYYYYYYYYYY$$$$$$YYYYYYYiiYYYY.
+*                     `$$$$$$$YYYYYYYYYYYYY$$$$$$YYYYYYYYiiiYYYYYY
+*                     .i!$$$$$$YYYYYYYYY$$$$$$YYY$$YYiiiiiiYYYYYYY
+*                    :YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi`
+         DFHMDF POS=(1,1),                                             X
+               LENGTH=8,                                               X
+               COLOR=BLUE,                                             X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='DOGECICS'
+*
+         DFHMDF POS=(9,9),                                             X
+               LENGTH=9,                                               X
+               COLOR=GREEN,                                            X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='MUCH COIN'
+*
+         DFHMDF POS=(2,31),                                            X
+               LENGTH=25,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Y.                      _'
+*
+         DFHMDF POS=(3,31),                                            X
+               LENGTH=3,                                               X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='YiL'
+*
+         DFHMDF POS=(3,42),                                            X
+               LENGTH=3,                                               X
+               COLOR=PINK,                                             X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='WOW'
+*
+         DFHMDF POS=(3,53),                                            X
+               LENGTH=5,                                               X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='.```.'
+*
+         DFHMDF POS=(4,31),                                            X
+               LENGTH=28,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Yii;                .; .;;`.'
+*
+         DFHMDF POS=(5,17),                                            X
+               LENGTH=42,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='              YY;ii._           .;`.;;;; :'
+*
+         DFHMDF POS=(6,31),                                            X
+               LENGTH=28,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='iiYYYYYYiiiii;;;;i` ;;::;;;;'
+*
+         DFHMDF POS=(7,27),                                            X
+               LENGTH=32,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_.;YYYYYYiiiiiiYYYii  .;;.   ;;;'
+*
+         DFHMDF POS=(8,24),                                            X
+               LENGTH=35,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='.YYYYYYYYYYiiYYYYYYYYYYYYii;`  ;;;;'
+*
+         DFHMDF POS=(9,22),                                            X
+               LENGTH=37,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='.YYYYYYY$$YYiiYY$$$$iiiYYYYYY;.ii;`..'
+*
+         DFHMDF POS=(10,21),                                           X
+               LENGTH=39,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=':YYY$!.  TYiiYY$$$$$YYYYYYYiiYYYYiYYii.'
+*
+         DFHMDF POS=(11,21),                                           X
+               LENGTH=40,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='Y$MM$:   :YYYYYY$!"``"4YYYYYiiiYYYYiiYY.'
+*
+         DFHMDF POS=(12,18),                                           X
+               LENGTH=42,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='`. :MM$$b.,dYY$$Yii" :`   :YYYYllYiiYYYiYY'
+*
+         DFHMDF POS=(13,15),                                           X
+               LENGTH=45,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='_.._ :`4MM$!YYYYYYYYYii,.__.diii$$YYYYYYYYYYY'
+*
+         DFHMDF POS=(14,15),                                           X
+               LENGTH=46,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='.,._ $b`P`     "4$$$$$iiiiiiii$$$$YY$$$$$$YiY;'
+*
+         DFHMDF POS=(15,18),                                           X
+               LENGTH=44,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='`,.`$:       :$$$$$$$$$YYYYY$$$$$$$$$YYiiYYL'
+*
+         DFHMDF POS=(16,19),                                           X
+               LENGTH=44,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='"`:$$.    .;PPb$~.,.``T$$YY$$$$YYYYYYiiiYYU:'
+*
+         DFHMDF POS=(17,17),                                           X
+               LENGTH=46,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='` ;$P$;;: ;;;;i$y$"!Y$$$b;$$$Y$YY$$YYYiiiYYiYY'
+*
+         DFHMDF POS=(18,19),                                           X
+               LENGTH=44,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='$Fi$$ .. ``:iii.`-";YYYYY$$YY$$$$$YYYiiYiYYY'
+*
+         DFHMDF POS=(19,19),                                           X
+               LENGTH=45,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=':Y$$rb ````  `_..;;i;YYY$YY$$$$$$$YYYYYYYiYY:'
+*
+         DFHMDF POS=(20,20),                                           X
+               LENGTH=45,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=':$$$$$i;;iiiiidYYYYYYYYYY$$$$$$YYYYYYYiiYYYY.'
+*
+         DFHMDF POS=(21,21),                                           X
+               LENGTH=44,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='`$$$$$$$YYYYYYYYYYYYY$$$$$$YYYYYYYYiiiYYYYYY'
+*
+         DFHMDF POS=(22,21),                                           X
+               LENGTH=44,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='.i!$$$$$$YYYYYYYYY$$$$$$YYY$$YYiiiiiiYYYYYYY'
+*
+         DFHMDF POS=(23,20),                                           X
+               LENGTH=45,                                              X
+               COLOR=YELLOW,                                           X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL=':YYiii$$$$$$$YYYYYYY$$$$YY$$$$YYiiiiiYYYYYYi`'
+*
+         DFHMDF POS=(14,67),                                           X
+               LENGTH=9,                                               X
+               COLOR=TURQUOISE,                                        X
+               ATTRB=(NORM,PROT),                                      X
+               INITIAL='SUCH CICS'
+* PRESS F5 TO CONTINUE
+         DFHMDF POS=(24,30),                                           X
+               LENGTH=20,                                              X
+               COLOR=RED,                                              X
+               ATTRB=(NORM,PROT,FSET),                                 X
+               INITIAL='PRESS F5 TO CONTINUE'
+         DFHMSD TYPE=FINAL
+         END

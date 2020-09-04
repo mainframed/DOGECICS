@@ -1,0 +1,40 @@
+@ALIGN NONE
+@SBA 0,0
+@SF P
+Hercules Version  :
+@SF HP
+$(VERSION)
+@NL
+@SF P
+Device number     :
+@SF HP
+$(CSS):$(CCUU)
+@NL
+@SF P
+Subchannel        :
+@SF HP
+$(SUBCHAN)
+@SF P
+@ALIGN LEFT
+                                                                      
+                           DOGE Banking Systems                       
+                                                                      
+            DOGE created by Soldier of FORTRAN mainframed767@gmail.com
+            TK3  created by Volker Bandke      vbandke@bsp-gmbh.com   
+            TK4- update by Juergen Winkelmann  winkelmann@id.ethz.ch  
+                     see TK4-.CREDITS for complete credits            
+                                                                      
+@SF HP
+@NL                                                                      
+                                                                      
+                 ___           ___           ___           ___        
+                /\  \         /\  \         /\  \         /\  \       
+               /::\  \       /::\  \       /::\  \       /::\  \      
+              /:/\:\  \     /:/\:\  \     /:/\:\  \     /:/\:\  \     
+             /:/  \:\__\   /:/  \:\  \   /:/  \:\  \   /::\~\:\  \    
+            /:/__/ \:|__| /:/__/ \:\__\ /:/__/_\:\__\ /:/\:\ \:\__\   
+            \:\  \ /:/  / \:\  \ /:/  / \:\  /\ \/__/ \:\~\:\ \/__/   
+             \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\     
+              \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/     
+               \::/__/       \::/  /       \::/  /       \:\__\       
+                ~~            \/__/         \/__/         \/__/       
