@@ -22,21 +22,24 @@ Read INSTALL.md for instalation details.
 
 ## Such Screenshots
 
-**Main Menu**
+**DOGE Splash Screen**
 
-<img>
+<img src="https://raw.githubusercontent.com/mainframed/DOGECICS/main/screenshots/01-DOGE.png">
+
+**Main Menu**
+<img src="https://raw.githubusercontent.com/mainframed/DOGECICS/main/screenshots/02-MAIN.png">
 
 **Transaction History**
 
-<img>
+<img src="https://raw.githubusercontent.com/mainframed/DOGECICS/main/screenshots/03-DTRN.png">
 
 **Transaction Details**
 
-<img>
+<img src="https://raw.githubusercontent.com/mainframed/DOGECICS/main/screenshots/04-DEET.png">
 
 **Send Doge Coin**
 
-<img>
+<img src="https://raw.githubusercontent.com/mainframed/DOGECICS/main/screenshots/05-DSND.png">
 
 
 ## Credits:
