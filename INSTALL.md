@@ -82,7 +82,7 @@ Ok, *phew* that was a lot of changes. But we're not done yet.
 
 7. Edit `SYS1.PARMLIB(STARTSTD)` (using the same method described above) and add `CMD $SPRT4` to the line below `CMD $SPRT3` (this makes sure the printer is started on IPL)
 
-8. Edit `SYS1.PARMLIB(SHUTDOWN)`, `SYS1.PARMLIB(SHUTFAST)`, and `SYS1.PARMLIB(SHUTNOW)` (using the same method described above) and add `$PPRT4` to the line below `$PPRT3` (this makes sure the printer is stopped on shutdown)
+8. Edit `SYS1.PARMLIB(SHUTDOWN)`, `SYS1.PARMLIB(SHUTFAST)`, and `SYS1.PARMLIB(SHUTNOW)` (using the same method described above) and add `CMD $P PRT4` to the line below `CMD $P PRT3` (this makes sure the printer is stopped on shutdown)
 
 Okay, we're done with **tk4-** surgery. The rest is easy. 
 
