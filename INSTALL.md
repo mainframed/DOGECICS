@@ -32,16 +32,13 @@ Next, boot **tk4-** with the `./mvs` command in linux. Once its loaded, use `x32
 
 Next we're going to make the following changes:
 
-1. Change `&MAXPART=6` to `&MAXPART=7`
-2. Change `&NUMPRTS=3` to `&NUMPRTS=4`
+1. Change `&MAXPART=6` to `&MAXPART=7` (This adds another initiator)
+2. Change `&NUMPRTS=3` to `&NUMPRTS=4` (This increases the number of printers)
 
-(these increase the number of printers)
+3. Change `I6       START,NAME=6,CLASS=SC` to `I6       START,NAME=6,CLASS=SCD` (this includes CLASS D to initiator 6 on startup)
 
-4. Change `I6       START,NAME=6,CLASS=SC` to `I6       START,NAME=6,CLASS=SCD`
+4. Underneath the following line: 
 
-(includes CLASS D in the initiators on startup)
-
-5. Underneath the following: 
 ```
 &C       NOJOURN,LOG,OUTPUT,PROCLIB=00,PERFORM=1, KICKS single thread  C
                CONVPARM=00000100099930E00011                            
@@ -53,13 +50,13 @@ add
 &D       NOJOURN,LOG,OUTPUT,PROCLIB=00,PERFORM=1, DOGE Output          C
                CONVPARM=00000100099930E00011                            
 ```
-(This includes Class D)
+(This creates a Class D for output)
 
-6. Then add the following below the `PRINTER3` line:
+5. Add the following below the `PRINTER3` line:
 
 ```
-PRINTER4       CLASS=D,SEP,AUTO,DSPLTCEL,NOPAUSE,UNIT=10E,DRAIN,       +
-               UCS=QN,FCB=6                                             
+PRINTER4       CLASS=D,SEP,AUTO,DSPLTCEL,NOPAUSE,UNIT=10E,START,       +
+               UCS=QN,FCB=6,FORMS=0001                                             
 ```
 
 So that it looks like this:
@@ -77,15 +74,15 @@ PRINTER4       CLASS=D,SEP,AUTO,DSPLTCEL,NOPAUSE,UNIT=10E,START,       +
 
 (This adds the actual printer)
 
-7. Change `$$D PRINT,SYSOUT,HOLD                HOLD - SYSOUT` to `$$D PRINT,SYSOUT,NOHOLD,TRKCEL      DOGE Printer for DOGECICS` 
+6. Change the line: `$$D PRINT,SYSOUT,HOLD                HOLD - SYSOUT` to `$$D PRINT,SYSOUT,NOHOLD,TRKCEL      DOGE Printer for DOGECICS` 
 
 (This changes the message class)
 
 Ok, *phew* that was a lot of changes. But we're not done yet. 
 
-Edit `SYS1.PARMLIB(STARTSTD)` (using the same method described above) and add `CMD $SPRT4` to the line below `CMD $SPRT3`
+7. Edit `SYS1.PARMLIB(STARTSTD)` (using the same method described above) and add `CMD $SPRT4` to the line below `CMD $SPRT3` (this makes sure the printer is started on IPL)
 
-(this makes sure the printer is started on IPL)
+8. Edit `SYS1.PARMLIB(SHUTDOWN)`, `SYS1.PARMLIB(SHUTFAST)`, and `SYS1.PARMLIB(SHUTNOW)` (using the same method described above) and add `$PPRT4` to the line below `$PPRT3` (this makes sure the printer is stopped on shutdown)
 
 Okay, we're done with **tk4-** surgery. The rest is easy. 
 
