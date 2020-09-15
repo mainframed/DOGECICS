@@ -257,14 +257,15 @@
            END-EXEC.
        PARSE-KEY.
       *    Do we want to leave this screen? 
-           IF OPTIONI EQUAL TO 'T' OR OPTIONI EQUAL TO 'M'
+           IF OPTIONI EQUAL TO 'T' OR OPTIONI EQUAL TO 't'
+      -       OR IF OPTIONI EQUAL TO 'M' OR OPTIONI EQUAL TO 'm'
                MOVE 'Opening Transaction History' TO WTO-MESSAGE
                PERFORM DOGE-WTO
                EXEC CICS XCTL 
                    PROGRAM('DOGETRAN')
                END-EXEC
            ELSE
-           IF OPTIONI EQUAL TO 'W'         
+           IF OPTIONI EQUAL TO 'W' OR OPTIONI EQUAL TO 'w'
                MOVE 'Opening Main Menu' TO WTO-MESSAGE
                PERFORM DOGE-WTO
                MOVE 'W' TO DOGECOMMS-AREA
@@ -273,7 +274,7 @@
                    COMMAREA(DOGECOMMS-AREA)
                END-EXEC
            ELSE
-           IF OPTIONI EQUAL TO 'S'
+           IF OPTIONI EQUAL TO 'S' OR OPTIONI EQUAL TO 's'
                MOVE 'Opening Such Send' TO WTO-MESSAGE
                PERFORM DOGE-WTO
                EXEC CICS XCTL 
