@@ -258,7 +258,7 @@
        PARSE-KEY.
       *    Do we want to leave this screen? 
            IF OPTIONI EQUAL TO 'T' OR OPTIONI EQUAL TO 't'
-      -       OR IF OPTIONI EQUAL TO 'M' OR OPTIONI EQUAL TO 'm'
+      -       OR OPTIONI EQUAL TO 'M' OR OPTIONI EQUAL TO 'm'
                MOVE 'Opening Transaction History' TO WTO-MESSAGE
                PERFORM DOGE-WTO
                EXEC CICS XCTL 
