@@ -86,7 +86,7 @@ Ok, *phew* that was a lot of changes. But we're not done yet.
 
 Okay, we're done with **tk4-** surgery. The rest is easy. 
 
-Take the following three lines and put them in a file called `dogebr14.jcl`:
+Take the following two lines and put them in a file called `dogebr14.jcl`:
 
 ```jcl
 //DOGEBR14 JOB CLASS=D,MSGCLASS=D,MSGLEVEL=(1,1)                          
